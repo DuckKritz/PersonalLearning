@@ -33,7 +33,7 @@ paddle_b.goto(350,0)
 ball= turtle.Turtle()
 ball.speed(0)
 ball.shape("square")
-ball.color("white")
+ball.color("orange")
 ball.penup()
 ball.goto(0, 0)
 ball.dx= 4
@@ -119,13 +119,15 @@ while True:
     if ball.xcor() < -340 and ball.xcor() > -350 and (ball.ycor() < paddle_a.ycor() +70 and ball.ycor() > paddle_a.ycor() -70):
         ball.setx(-340)
         ball.dx *= -1
-        
-    if (score_a==7):
+    
+    #Win conditions and closing the game
+    if (score_a==5):
         pen.clear()
         pen.write("Player A Wins!", align="center", font=("Courier", 24,"normal"))
+        time.sleep(3)
         break
-    if (score_b==7):
+    if (score_b==5):
         pen.clear() 
         pen.write("Player B Wins!", align= "center", font=("Courier", 24,"normal"))
+        time.sleep(3)
         break
-
